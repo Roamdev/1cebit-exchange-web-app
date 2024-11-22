@@ -1,14 +1,13 @@
+import MainPage from "@/components/main-page";
+
 export default function Home() {
   return (
-    <div className="">
+    <div className="body">
       <header className="">
-        <h1></h1>
+        <h1>Choose what you give</h1>
       </header>
       <main className="">
-        <div className=" container-buttons">
-          <button className="button--main">Click me</button>
-          <button className="button--main">Click me</button>
-        </div>
+        <MainPage />
       </main>
       <footer className="">
       </footer>
