@@ -1,7 +1,7 @@
-import SliderCoins from "./slider-coins"
-import NextStepButton from "./next-step"
+import { SliderCoins } from "./sliderCoins"
+import { NextStepButton } from "./nextStepButton"
 
-export default function MainPage() {
+export const MainPage = () => {
     return (
         <>
             <div className="coin">drag coin here</div>
@@ -10,7 +10,7 @@ export default function MainPage() {
                 <input type="text" className="coast-input" />
             </div>
             <SliderCoins />
-            <NextStepButton button_text="Next step" />
+            <NextStepButton buttonText="Next step" />
         </>
     )
 }
