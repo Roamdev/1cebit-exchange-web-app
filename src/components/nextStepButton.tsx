@@ -4,6 +4,6 @@ type NextStepButtonProps = {
 
 export const NextStepButton = ({ buttonText }: NextStepButtonProps) => {
     return (
-        <button>{buttonText}</button>
+        <button className="next-step-button">{buttonText}</button>
     );
 }
