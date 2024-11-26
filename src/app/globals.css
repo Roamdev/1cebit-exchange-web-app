@@ -31,7 +31,7 @@ main {
 .cost-title {
   font-size: 18px;
 }
-.cost-input{
+.cost-input {
   width: 100%;
   height: 64px;
   border: solid 3px #333;
@@ -67,17 +67,13 @@ main {
   display: flex;
   align-items: start;
   justify-content: start;
-  flex-direction: row;
+  flex-flow: row wrap;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .slider-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  /* padding: 5px; */
+  place-items: center;
+  place-content: center;
 }
 .slider-item:hover {
   cursor: pointer;
