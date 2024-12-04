@@ -1,24 +1,31 @@
 'use client'
-import { useRouter } from 'next/navigation'
 import { HeaderMessage } from '@/components/headerMessage'
+import { ChoosenCoin } from '@/components/choosenCoin'
+import { NextStepButton } from '@/components/nextStepButton'
+import { SliderCoins } from '@/components/sliderCoins'
 
 export default function Page() {
-    const router = useRouter()
 
     return (
         <div className="body">
                 <HeaderMessage message="Choosen what you give" />
             <main className="main">
-                <div className="cost-panel">
-                    <span className="cost-title">Введите сумму:</span>
-                    <input type="number" className="cost-input" />
+                <ChoosenCoin />
+                <div className="course-block">
+                    <div className="status-container">
+                        <span className="status-message">You will got</span>
+                        <span className="status-value">10$</span>
+                    </div>
+                    <div className="status-container">
+                        <span className="status-message">Comission</span>
+                        <span className="status-value">1$</span>
+                    </div>
                 </div>
-                <button 
-                    className="next-step-button"
-                    onClick={() => router.push('/third-page')}
-                >
-                    Далее
-                </button>
+                <SliderCoins />
+                <NextStepButton
+                    buttonText='Next step' 
+                    path='/choose-wallet'
+                />
             </main>
         </div>
     )

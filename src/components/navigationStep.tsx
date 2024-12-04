@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-export const NavigationStep = () => {
+export const NavigationStep = ({secondPath}) => {
     return (
         <>
             <Link href="/" className="nav--link nav--link__active">1</Link>
