@@ -8,7 +8,10 @@ export default function Page() {
 
     return (
         <div className="body">
-                <HeaderMessage message="Choosen what you give" />
+            <HeaderMessage 
+                message="Choosen what you give"
+                isActive={2}
+            />
             <main className="main">
                 <ChoosenCoin />
                 <div className="course-block">

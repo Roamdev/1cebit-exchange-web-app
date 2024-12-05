@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="body">
       <header className="header">
-        <HeaderMessage message="Choosen what you give"/>
+        <HeaderMessage message="Choosen what you give" />
       </header>
       <main className="main">
         <MainPage />

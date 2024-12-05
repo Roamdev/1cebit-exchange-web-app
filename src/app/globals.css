@@ -57,11 +57,9 @@
   width: 10%;
 }
 
-.input-container {
+
+.input-block {
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin: 25px 0;
 }
 .input-title {
   font-size: 18px;
@@ -70,6 +68,10 @@
   width: 100%;
   height: 64px;
   border: solid 3px #333;
+}
+
+.checkbox {
+  width: 90%;
 }
 
 .container-buttons {
