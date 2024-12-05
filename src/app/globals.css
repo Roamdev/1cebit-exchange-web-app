@@ -49,14 +49,12 @@
 .nav--link__active {
   background-color: #000;
   color: #fff;
-
 }
 .dash-block {
   height: 1px;
   background: #000;
   width: 10%;
 }
-
 
 .input-block {
   width: 90%;
@@ -119,7 +117,6 @@
 .slider-item--logo {
   border-radius: 50%;
 }
-
 .slider-item--title {
   width: 100%;
   margin-top: 15px;
@@ -150,7 +147,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-
 }
 .status-message {
   align-items: start;
@@ -160,7 +156,6 @@
 .status-value {
   align-items: end;
   font-size: 28px;
-
 }
 .status-message, .status-value {
   font-size: 28px;
