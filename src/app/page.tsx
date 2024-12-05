@@ -1,12 +1,13 @@
+import { HeaderMessage } from "@/components/headerMessage";
 import { MainPage } from "@/components/mainPage";
 
 export default function Home() {
   return (
     <div className="body">
-      <header className="">
-        <h1>Choose what you give</h1>
+      <header className="header">
+        <HeaderMessage message="Choosen what you give" />
       </header>
-      <main className="">
+      <main className="main">
         <MainPage />
       </main>
       <footer className="">

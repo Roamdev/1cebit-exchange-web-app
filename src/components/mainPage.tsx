@@ -1,16 +1,18 @@
 import { SliderCoins } from "./sliderCoins"
 import { NextStepButton } from "./nextStepButton"
+import { ChoosenCoin } from "./choosenCoin"
+import { InputBlock } from "./inputBlock"
 
 export const MainPage = () => {
     return (
         <>
-            <div className="coin">drag coin here</div>
-            <div className="cost-panel">
-                <div className="cost-title">How much you want to send</div>
-                <input type="text" className="cost-input" />
-            </div>
+            <ChoosenCoin />
+            <InputBlock message="How much you want to send"/>
             <SliderCoins />
-            <NextStepButton buttonText="Next step" />
+            <NextStepButton 
+                buttonText="Next step"
+                path="/second-page"
+            />
         </>
     )
 }

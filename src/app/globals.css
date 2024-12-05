@@ -1,40 +1,75 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  min-width: 480px;
+  width: 100%;
+  margin: auto;
+  max-width: 700px;
 }
-
-main {
+.header {
+  width: 100%;
+  place-items: center;
+  place-content: center;
+}
+.main {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
   height: 100%;
-  max-width: 700px;
-  min-width: 480px;
+  width: 100%;
   background: #ccc;
 }
 
-.cost-panel {
-  width: 90%;
+.nav {
   display: flex;
-  flex-direction: column;
-  margin: 25px 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100% ;
+  align-content: center;
 }
-.cost-title {
+.nav--link {
+  font-size: 28px;
+  display: block;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  border-radius: 50%;
+  border: 2px #000 solid;
+  width: 36px;
+  height: 36px;
+}
+.nav--link__active {
+  background-color: #000;
+  color: #fff;
+}
+.dash-block {
+  height: 1px;
+  background: #000;
+  width: 10%;
+}
+
+.input-block {
+  width: 90%;
+}
+.input-title {
   font-size: 18px;
 }
-.cost-input {
+.input-block input {
   width: 100%;
   height: 64px;
   border: solid 3px #333;
+}
+
+.checkbox {
+  width: 90%;
 }
 
 .container-buttons {
@@ -69,6 +104,7 @@ main {
   justify-content: start;
   flex-flow: row wrap;
   width: 100%;
+  margin: 16px 0;
 }
 
 .slider-item {
@@ -81,7 +117,6 @@ main {
 .slider-item--logo {
   border-radius: 50%;
 }
-
 .slider-item--title {
   width: 100%;
   margin-top: 15px;
@@ -94,4 +129,34 @@ main {
   height: 64px;
   margin: 25px 0;
   background: rgb(100, 120, 145);
+}
+
+.course-block {
+  display: flex;
+  margin: 32px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.status-container {
+  width: 60%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.status-message {
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+}
+.status-value {
+  align-items: end;
+  font-size: 28px;
+}
+.status-message, .status-value {
+  font-size: 28px;
 }
