@@ -6,15 +6,18 @@ type SliderItemsProperty = {
 }
 
 export const SliderItems = ({ coinName, coinLogo }: SliderItemsProperty)  => {
+
+    
     return (
-        <div className="slider-item">
+        <div className="slider-item" draggable={true}>
             <Image 
                 src={coinLogo}
                 alt={coinName}
                 width={80}
                 height={80}
                 className="slider-item--logo"
-            />
+                
+                />
             <div className="slider-item--title">{coinName}</div>
         </div>
     )

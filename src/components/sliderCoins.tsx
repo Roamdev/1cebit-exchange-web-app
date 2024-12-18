@@ -5,6 +5,9 @@ import 'swiper/css/navigation';
 import { SliderItems } from "./sliderItems"
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import DragItem from './dragItem';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 const mock = [
     {coinName: 'BTC', coinLogo: '/btc.png' },
@@ -17,21 +20,27 @@ const mock = [
 
 export const SliderCoins = () => {
     return (
-        <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={0}
-            slidesPerView={4}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            loop={true}
-            className='slider-item-list'
-        >
-            {mock.map(coin => (
-                <SwiperSlide key={coin.coinName}>
-                    <SliderItems coinName={coin.coinName} coinLogo={coin.coinLogo}/>
-                </SwiperSlide>
-            ))}
-        </Swiper>
+        <DndProvider backend={HTML5Backend}>
+            <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={0}
+                slidesPerView={4}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: false }}
+                draggable={false}
+                simulateTouch={false}
+                loop={true}
+                className='slider-item-list'
+            >
+                {mock.map(coin => (
+                    <SwiperSlide key={coin.coinName} >
+                        <DragItem>
+                            <SliderItems coinName={coin.coinName} coinLogo={coin.coinLogo}/>
+                        </DragItem>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </DndProvider>
     )
 }
