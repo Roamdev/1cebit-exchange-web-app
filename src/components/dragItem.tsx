@@ -1,14 +1,21 @@
 'use client'
-import { ReactChild } from 'react';
 import { useDrag } from 'react-dnd'
 
 type DragItemProps = {
-    children: ReactChild
+    children: React.ReactElement<{
+        coinName: string;
+        coinLogo: string;
+    }>;
 }
 
 export default function DragItem({children}: DragItemProps) {
     const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
         type: 'COIN',
+        item: {
+            type: 'COIN',
+            coinName: children.props.coinName,
+            coinLogo: children.props.coinLogo,
+        },
         collect: (monitor) => ({
             isDragging: monitor.isDragging()
         })

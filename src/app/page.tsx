@@ -5,7 +5,6 @@ import { SliderCoins } from "@/components/sliderCoins"
 import { NextStepButton } from "@/components/nextStepButton"
 import { InputBlock } from "@/components/inputBlock"
 import { DropZone } from "@/components/dropZone"
-import DragItem from "@/components/dragItem";
 
 export default function Home() {
   return (
@@ -23,9 +22,6 @@ export default function Home() {
         />
       </main>
       <footer className="">
-        <DragItem>
-          <div className="drag-item">pupadupalupa</div>
-        </DragItem>
       </footer>
     </div>
   );
