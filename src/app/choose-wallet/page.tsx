@@ -1,15 +1,15 @@
 'use client'
 import { HeaderMessage } from '@/components/headerMessage'
-import { ChoosenCoin } from '@/components/choosenCoin'
 import { NextStepButton } from '@/components/nextStepButton'
 import { InputBlock } from '@/components/inputBlock'
+import { DropZone } from '@/components/dropZone'
 
 export default function ChooseWallet() {
     return (
         <div className="body">
             <HeaderMessage isActive={3}/>
             <main className="main">
-                <ChoosenCoin />
+                <DropZone />
                 <InputBlock message="Sender's wallet address" />
                 <InputBlock message="Recipient's wallet address" />
                 <div className="checkbox">
@@ -22,7 +22,7 @@ export default function ChooseWallet() {
                 </div>
                 <NextStepButton
                     buttonText='Next step'
-                    path='/'
+                    path='/dnd-test'
                 />
             </main>
         </div>

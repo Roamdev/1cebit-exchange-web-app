@@ -1,8 +1,8 @@
 'use client'
 import { HeaderMessage } from '@/components/headerMessage'
-import { ChoosenCoin } from '@/components/choosenCoin'
 import { NextStepButton } from '@/components/nextStepButton'
 import { SliderCoins } from '@/components/sliderCoins'
+import { DropZone } from '@/components/dropZone'
 
 export default function Page() {
 
@@ -13,7 +13,7 @@ export default function Page() {
                 isActive={2}
             />
             <main className="main">
-                <ChoosenCoin />
+                <DropZone />
                 <div className="course-block">
                     <div className="status-container">
                         <span className="status-message">You will got</span>

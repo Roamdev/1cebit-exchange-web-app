@@ -81,12 +81,15 @@
 }
 .coin {
   border-radius: 50%;
-  border: dashed 3px #333;
   width: 240px;
   height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.coin--unchoosen {
+  border: dashed 3px #333;
+
 }
 
 .button--main {
@@ -159,4 +162,23 @@
 }
 .status-message, .status-value {
   font-size: 28px;
+}
+
+.drop-zone {
+  width: 264px;
+  height: 264px;
+  background-color: #000;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  color: #ccc;
+  font-size: 36px;
+}
+.drag-item {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border-radius: 1px solid #ccc;
 }
