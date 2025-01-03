@@ -1,24 +1,23 @@
 import Image from 'next/image'
 
 type SliderItemsProperty = {
-    coinName: string;
-    coinLogo: string;
+    CoinName: string;
+    CoinLogo: string;
 }
 
-export const SliderItems = ({ coinName, coinLogo }: SliderItemsProperty)  => {
+export const SliderItems = ({ CoinLogo, CoinName }: SliderItemsProperty)  => {
 
     
     return (
         <div className="slider-item" draggable={true}>
             <Image 
-                src={coinLogo}
-                alt={coinName}
+                src={CoinLogo}
+                alt={CoinName}
                 width={80}
                 height={80}
                 className="slider-item--logo"
-                
                 />
-            <div className="slider-item--title">{coinName}</div>
+            <div className="slider-item--title">{CoinName}</div>
         </div>
     )
 }

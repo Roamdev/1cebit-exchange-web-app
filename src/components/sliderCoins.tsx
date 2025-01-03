@@ -35,8 +35,8 @@ export const SliderCoins = () => {
             >
                 {mock.map(coin => (
                     <SwiperSlide key={coin.coinName} >
-                        <DragItem>
-                            <SliderItems coinName={coin.coinName} coinLogo={coin.coinLogo}/>
+                        <DragItem CoinName={coin.coinName} CoinLogo={coin.coinLogo}>
+                            <SliderItems CoinName={coin.coinName} CoinLogo={coin.coinLogo}/>
                         </DragItem>
                     </SwiperSlide>
                 ))}
