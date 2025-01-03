@@ -10,7 +10,7 @@ export default function Page() {
         <div className="body">
             <HeaderMessage 
                 message="Choosen what you give"
-                isActive={2}
+                activePage={2}
             />
             <main className="main">
                 <DropZone />

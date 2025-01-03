@@ -2,18 +2,18 @@
 import { useDrag } from 'react-dnd'
 
 type DragItemProps = {
-    CoinName: string;
-    CoinLogo: string;
+    coinName: string;
+    coinLogo: string;
     children: React.ReactNode;
 }
 
-export default function DragItem({CoinName, CoinLogo, children}: DragItemProps) {
+export default function DragItem({coinName, coinLogo, children}: DragItemProps) {
     const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
         type: 'COIN',
         item: {
             type: 'COIN',
-            CoinName: CoinName,
-            CoinLogo: CoinLogo,
+            coinName: coinName,
+            coinLogo: coinLogo,
         },
         collect: (monitor) => ({
             isDragging: monitor.isDragging()

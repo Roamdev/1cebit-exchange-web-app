@@ -7,7 +7,7 @@ import { DropZone } from '@/components/dropZone'
 export default function ChooseWallet() {
     return (
         <div className="body">
-            <HeaderMessage isActive={3}/>
+            <HeaderMessage activePage={3}/>
             <main className="main">
                 <DropZone />
                 <InputBlock message="Sender's wallet address" />

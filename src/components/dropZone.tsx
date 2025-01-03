@@ -3,8 +3,8 @@ import { useDrop } from 'react-dnd'
 import { useState } from 'react'
 
 type DroppedItem = {
-    CoinName: string;
-    CoinLogo: string;
+    coinName: string;
+    coinLogo: string;
 } | null;
 
 export function DropZone() {
@@ -12,7 +12,7 @@ export function DropZone() {
     
     const [{ canDrop }, drop] = useDrop(() => ({
         accept: 'COIN',
-        drop: (item: { CoinName: string; CoinLogo: string }) => {
+        drop: (item: { coinName: string; coinLogo: string }) => {
             console.log('Dropped coin:', item);
             setDroppedItem(item);
         },
@@ -26,8 +26,8 @@ export function DropZone() {
         <>
             {droppedItem ? (
                 <Image 
-                    src={droppedItem.CoinLogo}
-                    alt={droppedItem.CoinName}
+                    src={droppedItem.coinLogo}
+                    alt={droppedItem.coinName}
                     ref={el => {drop(el)}}
                     role={'Dustbin'}
                     width={80}

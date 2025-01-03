@@ -2,14 +2,14 @@ import { NavigationStep } from "./navigationStep"
 
 type HeaderMessageProps = {
     message?: string,
-    isActive?: number
+    activePage?: number
 }
 
-export const HeaderMessage = ({message = '', isActive = 1}: HeaderMessageProps) => {
+export const HeaderMessage = ({message = '', activePage = 1}: HeaderMessageProps) => {
     return (
         <>
             <nav className="nav">
-                <NavigationStep isActive={isActive}/>
+                <NavigationStep activePage={activePage}/>
             </nav>
             {message && <h1>{message}</h1>}
         </>
