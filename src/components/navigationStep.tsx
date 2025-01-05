@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import { clsx } from 'clsx'
+
+import styles from './NavigationStep.module.css'
 
 type NavigationStepProps = {
-    isActive?: number
+    countPage: number
 }
 
-export const NavigationStep = ({isActive=1}: NavigationStepProps) => {
+export const NavigationStep = ({countPage=1}: NavigationStepProps) => {
     return (
         <>
-            <Link href='/' className="nav--link nav--link__active">1</Link>
-            <div className="dash-block" />
-            <Link href='/' className={`nav--link ${isActive > 1 ? 'nav--link__active' : ''}`}>2</Link>
-            <div className="dash-block" />
-            <Link href='/' className={`nav--link ${isActive > 2 ? 'nav--link__active' : ''}`}>3</Link>
-            <div className="dash-block" />
-            <Link href='/' className={`nav--link ${isActive > 3 ? 'nav--link__active' : ''}`}>4</Link>
+            <Link href='/' className={clsx(styles.navLink, styles.navLinkActive)}>1</Link>
+            <Link href='/' className={clsx(styles.navLink, countPage > 1 ? styles.navLinkActive : '')}>2</Link>
+            <Link href='/' className={clsx(styles.navLink, countPage > 2 ? styles.navLinkActive : '')}>3</Link>
+            <Link href='/' className={clsx(styles.navLink, countPage > 3 ? styles.navLinkActive : '')}>4</Link>
         </>
     )
 }

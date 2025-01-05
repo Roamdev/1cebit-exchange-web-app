@@ -1,11 +1,14 @@
+import styles from './InputBlock.module.css'
+
 type InputBlockProps = {
     message?: string
 }
+
 export const InputBlock = ({message = ''}:InputBlockProps) => {
     return (
-        <div className="input-block">
-            {message && <span className="input-title">{message}</span>}
-            <input type="text" />
+        <div className={styles.container}>
+            {message && <span className={styles.title}>{message}</span>}
+            <input className={styles.item}type="text" />
         </div>
     )
 }

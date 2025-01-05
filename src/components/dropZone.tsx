@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import { useDrop } from 'react-dnd'
 import { useState } from 'react'
+import { clsx } from 'clsx'
+
+
+import styles from './DropZone.module.css';
 
 type DroppedItem = {
     coinName: string;
@@ -13,7 +17,6 @@ export function DropZone() {
     const [{ canDrop }, drop] = useDrop(() => ({
         accept: 'COIN',
         drop: (item: { coinName: string; coinLogo: string }) => {
-            console.log('Dropped coin:', item);
             setDroppedItem(item);
         },
         collect: (monitor) => ({
@@ -32,11 +35,11 @@ export function DropZone() {
                     role={'Dustbin'}
                     width={80}
                     height={80}
-                    className="coin"
+                    className={styles.coin}
                 />
             ) : (
                 <div
-                    className="coin coin--unchoosen"
+                    className={clsx(styles.coin, styles.coinUnchoosen)}
                     ref={el => {drop(el)}}
                     role={'Dustbin'}
                 >

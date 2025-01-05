@@ -1,15 +1,17 @@
-import { NavigationStep } from "./navigationStep"
+import { NavigationStep } from "./NavigationStep"
+
+import styles from "./HeaderMessage.module.css"
 
 type HeaderMessageProps = {
     message?: string,
-    isActive?: number
+    countPage?: number
 }
 
-export const HeaderMessage = ({message = '', isActive = 1}: HeaderMessageProps) => {
+export const HeaderMessage = ({message = '', countPage = 1}: HeaderMessageProps) => {
     return (
         <>
-            <nav className="nav">
-                <NavigationStep isActive={isActive}/>
+            <nav className={styles.nav}>
+                <NavigationStep countPage={countPage}/>
             </nav>
             {message && <h1>{message}</h1>}
         </>

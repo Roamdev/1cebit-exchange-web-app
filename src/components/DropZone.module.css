@@ -1,0 +1,21 @@
+.coin {
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coinUnchoosen {
+    border: dashed 3px #333;
+}
+.drop-zone {
+    width: 264px;
+    height: 264px;
+    background-color: #000;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    color: #ccc;
+    font-size: 36px;
+}
