@@ -1,13 +1,15 @@
 'use client'
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { SliderItems } from "./sliderItems"
+import { SliderItems } from "./SliderItems"
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import DragItem from './dragItem';
+import DragItem from './DragItem';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import styles from'./SliderCoins.module.css'
 
 const mock = [
     {coinName: 'BTC', coinLogo: '/btc.png' },
@@ -31,7 +33,7 @@ export const SliderCoins = () => {
                 draggable={false}
                 simulateTouch={false}
                 loop={true}
-                className='slider-item-list'
+                className={styles.sliderItemList}
             >
                 {mock.map(coin => (
                     <SwiperSlide key={coin.coinName} >

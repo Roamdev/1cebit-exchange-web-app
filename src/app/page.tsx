@@ -1,10 +1,10 @@
 'use client'
 
-import { HeaderMessage } from "@/components/headerMessage";
-import { SliderCoins } from "@/components/sliderCoins"
-import { NextStepButton } from "@/components/nextStepButton"
-import { InputBlock } from "@/components/inputBlock"
-import { DropZone } from "@/components/dropZone"
+import { HeaderMessage } from "@/components/HeaderMessage";
+import { SliderCoins } from "@/components/SliderCoins"
+import { NextStepButton } from "@/components/NextStepButton"
+import { InputBlock } from "@/components/InputBlock"
+import { DropZone } from "@/components/DropZone"
 
 export default function Home() {
   return (
@@ -14,11 +14,11 @@ export default function Home() {
       </header>
       <main className="main">
         <DropZone />
-        <InputBlock message="How much you want to send"/>
+        <InputBlock message="How much you want to send" />
         <SliderCoins />
-        <NextStepButton 
-            buttonText="Next step"
-            path="/second-page"
+        <NextStepButton
+          buttonText="Next step"
+          path="/second-page"
         />
       </main>
       <footer className="">

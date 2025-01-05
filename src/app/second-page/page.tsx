@@ -1,8 +1,11 @@
 'use client'
-import { HeaderMessage } from '@/components/headerMessage'
-import { NextStepButton } from '@/components/nextStepButton'
-import { SliderCoins } from '@/components/sliderCoins'
-import { DropZone } from '@/components/dropZone'
+
+import { HeaderMessage } from '@/components/HeaderMessage'
+import { NextStepButton } from '@/components/NextStepButton'
+import { SliderCoins } from '@/components/SliderCoins'
+import { DropZone } from '@/components/DropZone'
+
+import styles from './SecondPage.module.css'
 
 export default function Page() {
 
@@ -14,14 +17,14 @@ export default function Page() {
             />
             <main className="main">
                 <DropZone />
-                <div className="course-block">
-                    <div className="status-container">
-                        <span className="status-message">You will got</span>
-                        <span className="status-value">10$</span>
+                <div className={styles.courseBlock}>
+                    <div className={styles.statusContainer}>
+                        <span className={styles.statusMessage}>You will got</span>
+                        <span className={styles.statusValue}>10$</span>
                     </div>
-                    <div className="status-container">
-                        <span className="status-message">Comission</span>
-                        <span className="status-value">1$</span>
+                    <div className={styles.statusContainer}>
+                        <span className={styles.statusMessage}>Comission</span>
+                        <span className={styles.statusValue}>1$</span>
                     </div>
                 </div>
                 <SliderCoins />

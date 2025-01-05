@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import styles from './SliderItems.module.css'
+
 type SliderItemsProperty = {
     coinName: string;
     coinLogo: string;
@@ -7,17 +9,16 @@ type SliderItemsProperty = {
 
 export const SliderItems = ({ coinLogo, coinName }: SliderItemsProperty)  => {
 
-    
     return (
-        <div className="slider-item" draggable={true}>
-            <Image 
+        <div className={styles.sliderItem} draggable={true}>
+            <Image
                 src={coinLogo}
                 alt={coinName}
                 width={80}
                 height={80}
-                className="slider-item--logo"
-                />
-            <div className="slider-item--title">{coinName}</div>
+                className={styles.sliderItemLogo}
+            />
+            <div className={styles.sliderItemTitle}>{coinName}</div>
         </div>
     )
 }

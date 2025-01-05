@@ -1,0 +1,11 @@
+.inputContainer {
+    width: 90%;
+}
+.inputTitle {
+    font-size: 18px;
+}
+.inputItem {
+    width: 100%;
+    height: 64px;
+    border: solid 3px #333;
+}

@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation'
 
+import styles from './NextStepButton.module.css'
 
 type NextStepButtonProps = {
     buttonText: string;
@@ -11,8 +12,8 @@ export const NextStepButton = ({ buttonText, path }: NextStepButtonProps) => {
     const router = useRouter()
 
     return (
-        <button 
-            className="next-step-button"
+        <button
+            className={styles.nextStepButton}
             onClick={() => router.push(path)}
         >
             {buttonText}
