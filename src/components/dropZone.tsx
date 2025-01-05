@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { useDrop } from 'react-dnd'
 import { useState } from 'react'
+import { clsx } from 'clsx'
+
 
 import styles from './DropZone.module.css';
 
@@ -37,7 +39,7 @@ export function DropZone() {
                 />
             ) : (
                 <div
-                    className={`${styles.coin} ${styles.coinUnchoosen}`}
+                    className={clsx(styles.coin, styles.coinUnchoosen)}
                     ref={el => {drop(el)}}
                     role={'Dustbin'}
                 >

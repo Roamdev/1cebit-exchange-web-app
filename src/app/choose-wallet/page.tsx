@@ -9,18 +9,18 @@ import styles from './ChoosenWallet.module.css'
 export default function ChooseWallet() {
     return (
         <div className="body">
-            <HeaderMessage activePage={3}/>
+            <HeaderMessage countPage={3}/>
             <main className="main">
                 <DropZone />
                 <InputBlock message="Sender's wallet address" />
                 <InputBlock message="Recipient's wallet address" />
-                <div className={styles.checkbox}>
+                <div className={styles.container}>
                     <input
                         type="checkbox"
                         name=""
                         id=""
                     />
-                    <span className={styles.checkboxName}>I agree with rules</span>
+                    <span className={styles.title}>I agree with rules</span>
                 </div>
                 <NextStepButton
                     buttonText='Next step'

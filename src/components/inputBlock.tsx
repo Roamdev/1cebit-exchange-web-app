@@ -6,9 +6,9 @@ type InputBlockProps = {
 
 export const InputBlock = ({message = ''}:InputBlockProps) => {
     return (
-        <div className={styles.inputContainer}>
-            {message && <span className={styles.inputTitle}>{message}</span>}
-            <input className={styles.inputItem}type="text" />
+        <div className={styles.container}>
+            {message && <span className={styles.title}>{message}</span>}
+            <input className={styles.item}type="text" />
         </div>
     )
 }

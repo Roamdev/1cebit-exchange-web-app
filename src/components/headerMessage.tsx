@@ -4,14 +4,14 @@ import styles from "./HeaderMessage.module.css"
 
 type HeaderMessageProps = {
     message?: string,
-    activePage?: number
+    countPage?: number
 }
 
-export const HeaderMessage = ({message = '', activePage = 1}: HeaderMessageProps) => {
+export const HeaderMessage = ({message = '', countPage = 1}: HeaderMessageProps) => {
     return (
         <>
             <nav className={styles.nav}>
-                <NavigationStep activePage={activePage}/>
+                <NavigationStep countPage={countPage}/>
             </nav>
             {message && <h1>{message}</h1>}
         </>
