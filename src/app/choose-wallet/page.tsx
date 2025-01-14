@@ -1,5 +1,5 @@
 'use client'
-import { HeaderMessage } from '@/components/HeaderMessage'
+import { StepPanel } from '@/components/StepPanel'
 import { NextStepButton } from '@/components/NextStepButton'
 import { InputBlock } from '@/components/InputBlock'
 import { DropZone } from '@/components/DropZone'
@@ -9,7 +9,7 @@ import styles from './ChoosenWallet.module.css'
 export default function ChooseWallet() {
     return (
         <div className="body">
-            <HeaderMessage countPage={3}/>
+            <StepPanel countPage={2}/>
             <main className="main">
                 <DropZone />
                 <InputBlock message="Sender's wallet address" />
@@ -24,7 +24,7 @@ export default function ChooseWallet() {
                 </div>
                 <NextStepButton
                     buttonText='Next step'
-                    path='/dnd-test'
+                    path='/'
                 />
             </main>
         </div>

@@ -1,12 +1,30 @@
+:root {
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-subtitle: 1.25rem;
+  --fs-description: 1.125rem;
+  --bg-black: rgb(1, 0, 0);
+  --bg-purple: rgba(85, 27, 51, .37);
+  --box-bg-dark: rgb(3, 1, 2);
+  --text-color: rgb(226, 226, 226);
+  --bs-white: rgba(225,225,225, .3)
+}
+
+body {
+  background: var(--bg-black);
+  color: var(--text-color);
+  min-width: 375px;
+  max-width: 450px;
+  display: flex;
+  margin: auto;
+}
 .body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 480px;
   width: 100%;
   margin: auto;
-  max-width: 700px;
 }
 .header {
   width: 100%;
@@ -21,5 +39,4 @@
   padding: 20px 0;
   height: 100%;
   width: 100%;
-  background: #ccc;
 }

@@ -21,8 +21,8 @@
 }
 .value {
     align-items: end;
-    font-size: 28px;
+    font-size: var(--fs-h2);
 }
 .message, .value {
-    font-size: 28px;
+    font-size: var(--fs-h2);
 }

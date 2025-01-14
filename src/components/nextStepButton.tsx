@@ -13,7 +13,7 @@ export const NextStepButton = ({ buttonText, path }: NextStepButtonProps) => {
 
     return (
         <button
-            className={styles.nextStepButton}
+            className={styles.button}
             onClick={() => router.push(path)}
         >
             {buttonText}
