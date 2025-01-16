@@ -1,8 +1,9 @@
-.sliderItemList {
+.itemList {
     display: flex;
     align-items: start;
     justify-content: start;
     flex-flow: row wrap;
-    width: 100%;
+    width: 90%;
+    padding: 0 12px;
     margin: 16px 0;
 }

@@ -1,6 +1,12 @@
-.nextStepButton {
-    width: 90%;
-    height: 64px;
+.button {
+    width: 50%;
+    height: 48px;
     margin: 25px 0;
-    background: rgb(100, 120, 145);
+    background: var(--box-bg-dark);
+    color: var(--text-color);
+    border-radius: 12px;
+    border: solid 1px var(--text-color);
+}
+.button:active {
+    border: solid 1px var(--bg-purple);
 }

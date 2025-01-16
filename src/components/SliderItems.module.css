@@ -1,14 +1,14 @@
-.sliderItem {
+.item {
     place-items: center;
     place-content: center;
 }
-.sliderItem:hover {
+.item:hover {
     cursor: pointer;
 }
-.sliderItemLogo {
+.logo {
     border-radius: 50%;
 }
-.sliderItemTitle {
+.title {
     width: 100%;
     margin-top: 15px;
     justify-content: center;

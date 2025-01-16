@@ -1,6 +1,6 @@
 'use client'
 
-import { HeaderMessage } from "@/components/HeaderMessage";
+import { StepPanel } from "@/components/StepPanel";
 import { SliderCoins } from "@/components/SliderCoins"
 import { NextStepButton } from "@/components/NextStepButton"
 import { InputBlock } from "@/components/InputBlock"
@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div className="body">
       <header className="header">
-        <HeaderMessage message="Choosen what you give" />
+        <StepPanel  />
       </header>
       <main className="main">
-        <DropZone />
+        <DropZone pageTitle="Choose what you give" />
         <InputBlock message="How much you want to send" />
         <SliderCoins />
         <NextStepButton

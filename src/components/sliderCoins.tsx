@@ -26,14 +26,14 @@ export const SliderCoins = () => {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={0}
-                slidesPerView={4}
+                slidesPerView={3}
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: false }}
                 draggable={false}
                 simulateTouch={false}
                 loop={true}
-                className={styles.sliderItemList}
+                className={styles.itemList}
             >
                 {mock.map(coin => (
                     <SwiperSlide key={coin.coinName} >
