@@ -29,13 +29,13 @@ export const StepPanel = ({ countPage = 0 }: StepperProps) => {
                   <StepLabel
                     sx={{
                       '& .MuiStepLabel-label': {
-                        color: 'rgba(85, 27, 51, .8)' // активный цвет
+                        color: 'rgba(85, 27, 51, .8)'
                       },
                       '& .MuiStepLabel-label.Mui-active': {
-                        color: 'rgba(225,225,225, .7)', // активный цвет
+                        color: 'rgba(225,225,225, .7)'
                       },
                       '& .MuiStepLabel-label.Mui-completed': {
-                        color: 'rgba(25, 118, 210, 1)' // завершенный цвет
+                        color: 'rgba(25, 118, 210, 1)'
                       }
                     }}>
                     {label}
