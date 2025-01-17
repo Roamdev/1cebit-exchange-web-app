@@ -1,13 +1,17 @@
+@import 'reset-css';
+
 :root {
-  --fs-h1: 3rem;
-  --fs-h2: 2rem;
-  --fs-subtitle: 1.25rem;
-  --fs-description: 1.125rem;
+  --fs-h1: 48px;
+  --fs-h2: 32px;
+  --fs-subtitle: 20px;
+  --fs-description: 18px;
   --bg-black: rgb(1, 0, 0);
-  --bg-purple: rgba(85, 27, 51, .37);
+  --bg-purple: rgba(85, 27, 51, .5);
   --box-bg-dark: rgb(3, 1, 2);
   --text-color: rgb(226, 226, 226);
   --bs-white: rgba(225,225,225, .3)
+  --text-color-input: rgb(155 155 155)
+  --border-gradient: conic-gradient(from 180deg at 50% 50%, #e92a67 0deg, #a853ba 112.5deg, #2a8af6 228.75deg, rgba(42, 138, 246, 0) 360deg);
 }
 
 body {
