@@ -2,11 +2,18 @@
     width: 50%;
     height: 48px;
     margin: 25px 0;
-    background: var(--box-bg-dark);
-    color: var(--text-color);
+    background: rgb(var(--color-main));
+    color: rgb(var(--text-color-primary));
     border-radius: 12px;
-    border: solid 1px var(--text-color);
+    border: solid 1px rgb(var(--color-secondary));
+    transition: var(--transition);
+    padding: 0;
 }
 .button:active {
-    border: solid 1px var(--bg-purple);
+    border: solid 1px rgb(var(--color-secondary));
+}
+.button:hover {
+    background: rgb(var(--color-secondary));
+    transition: var(--transition);
+
 }

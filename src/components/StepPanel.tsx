@@ -22,20 +22,20 @@ export const StepPanel = ({ countPage = 0 }: StepperProps) => {
                 key={label}
                 sx={{
                   '& .MuiStepIcon-root': {
-                    color: '#222121'
+                    color: 'rgba(var(--text-color-inactive), .8)'
                   }
                 }}>
                 <Link className={styles.link} href="/">
                   <StepLabel
                     sx={{
                       '& .MuiStepLabel-label': {
-                        color: 'rgba(85, 27, 51, .8)'
+                        color: 'rgba(var(--text-color-inactive), .8)'
                       },
                       '& .MuiStepLabel-label.Mui-active': {
-                        color: 'rgba(225,225,225, .7)'
+                        color: 'rgba(var(--text-color-white), .7)'
                       },
                       '& .MuiStepLabel-label.Mui-completed': {
-                        color: 'rgba(25, 118, 210, 1)'
+                        color: 'rgba(var(--text-color-completed), 1)'
                       }
                     }}>
                     {label}

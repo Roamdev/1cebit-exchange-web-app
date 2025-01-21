@@ -8,11 +8,9 @@
     padding: 24px 0 0;
 }
 .link {
-    color: #bab9b9;
     text-decoration: none;
 }
 
 .link span {
-    color: #bab9b9;
     font-size: var(--main-fs-subtitle);
 }

@@ -1,9 +1,45 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .coinWithoutBorder {
     border: 0;
 }
+.border {
+    content: '';
+    position: absolute;
+    overflow: hidden;
+    padding: 10px;
+    mask-composite: exclude;
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+}
+.border::before {
+    content: '';
+    background: var(--border-gradient);
+    position: absolute;
+    width: calc(100% * 1.41421356237);
+    height: calc(100%* 1.41421356237);
+    left: -15%;
+    top: -30%;
+    z-index: -2;
+}
+.border:hover {
+    animation: rotate 2s linear infinite;
+}
 .container {
+    overflow: hidden;
     display: flex;
+    position: relative;
     min-width: 350px;
     max-width: 100%;
     margin: 12px;
@@ -12,10 +48,9 @@
     place-items: center;
     flex-direction: column;
     padding: 32px 12px 48px;
-    background: var(--box-bg-dark);
+    background: rgb(var(--color-secondary));
     border-radius: 24px;
-    border: solid 1px rgba(225,225,225, .3);
-    overflow: hidden;
+    border: solid 1px rgba(var(--color-white), .3);
     
 }
 .title {
@@ -33,14 +68,14 @@
     justify-content: center;
     font-size: var(--fs-subtitle);
     align-items: center;
+    border: 1px solid rgba(var(--color-accent));
     box-shadow: 
-                0 0 10px 100px rgba(3, 3, 3, .4),
-                35px 35px 480px var(--bg-purple),
-                -35px -35px 480px var(--bg-purple),
-                -35px 35px 480px var(--bg-purple),
-                35px -35px 480px var(--bg-purple),
-                -45px -10px 480px var(--bg-purple),
-                45px -10px 480px var(--bg-purple);
+                35px 35px 480px var(--color-accent),
+                -35px -35px 480px var(--color-accent),
+                -35px 35px 480px var(--color-accent),
+                35px -35px 480px var(--color-accent),
+                -45px -10px 480px var(--color-accent),
+                45px -10px 480px var(--color-accent);
 }
 .drop-zone {
     width: 140px;

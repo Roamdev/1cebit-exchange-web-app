@@ -14,6 +14,7 @@ type DroppedItem = {
 
 export function DropZone({ pageTitle }: DropZoneProps) {
   const [droppedItem, setDroppedItem] = useState<DroppedItem>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const [{ canDrop }, drop] = useDrop(() => ({
     accept: 'COIN',
@@ -27,7 +28,17 @@ export function DropZone({ pageTitle }: DropZoneProps) {
   }));
 
   return (
-    <div className={styles.container}>
+    <div 
+      className={styles.container}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      >
+      <div 
+        className={styles.border} 
+        style={{
+          opacity: isHovered ? 1 : 0,
+          animation: isHovered? `${styles.rotate} 2s linear infinite` : 'none'
+          }}/>
       {droppedItem ? (
         <>
           <Image
