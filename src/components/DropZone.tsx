@@ -14,7 +14,6 @@ type DroppedItem = {
 
 export function DropZone({ pageTitle }: DropZoneProps) {
   const [droppedItem, setDroppedItem] = useState<DroppedItem>(null);
-  const [isHovered, setIsHovered] = useState(false);
 
   const [{ canDrop }, drop] = useDrop(() => ({
     accept: 'COIN',
@@ -28,45 +27,38 @@ export function DropZone({ pageTitle }: DropZoneProps) {
   }));
 
   return (
-    <div 
-      className={styles.container}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      >
-      <div 
-        className={styles.border} 
-        style={{
-          opacity: isHovered ? 1 : 0,
-          animation: isHovered? `${styles.rotate} 2s linear infinite` : 'none'
-          }}/>
-      {droppedItem ? (
-        <>
-          <Image
-            src={droppedItem.coinLogo}
-            alt={droppedItem.coinName}
-            ref={(el) => {
-              drop(el);
-            }}
-            role={'Dustbin'}
-            width={80}
-            height={80}
-            className={clsx(styles.coin, styles.coinWithoutBorder)}
-          />
-          {pageTitle && <h1 className={styles.title}>{pageTitle}</h1>}
-        </>
-      ) : (
-        <>
-          <div
-            className={clsx(styles.coin, styles.coinWithBorder)}
-            ref={(el) => {
-              drop(el);
-            }}
-            role={'Dustbin'}>
-            {canDrop ? 'Release to drop' : 'Drag a box here'}
-          </div>
-          {pageTitle && <h1 className={styles.title}>{pageTitle}</h1>}
-        </>
-      )}
+    <div className={styles.container}>
+      <div className={styles.border} />
+      <div className={styles.dropZone}>
+        {droppedItem ? (
+          <>
+            <Image
+              src={droppedItem.coinLogo}
+              alt={droppedItem.coinName}
+              ref={(el) => {
+                drop(el);
+              }}
+              role={'Dustbin'}
+              width={80}
+              height={80}
+              className={clsx(styles.coin, styles.coinWithoutBorder)}
+            />
+            {pageTitle && <h1 className={styles.title}>{pageTitle}</h1>}
+          </>
+        ) : (
+          <>
+            <div
+              className={clsx(styles.coin, styles.coinWithBorder)}
+              ref={(el) => {
+                drop(el);
+              }}
+              role={'Dustbin'}>
+              {canDrop ? 'Release to drop' : 'Drag a box here'}
+            </div>
+            {pageTitle && <h1 className={styles.title}>{pageTitle}</h1>}
+          </>
+        )}
+      </div>
     </div>
   );
 }

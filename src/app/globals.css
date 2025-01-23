@@ -16,7 +16,6 @@
   --transition: all 5 ease;
 
   --border-gradient: conic-gradient(from 180deg at 50% 50%, #e92a67 0deg, #a853ba 112.5deg, #2a8af6 228.75deg, rgba(42, 138, 246, 0) 360deg);
-
 }
 
 body {
