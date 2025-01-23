@@ -5,18 +5,23 @@
   --fs-h2: 32px;
   --fs-subtitle: 20px;
   --fs-description: 18px;
-  --bg-black: rgb(1, 0, 0);
-  --bg-purple: rgba(85, 27, 51, .5);
-  --box-bg-dark: rgb(3, 1, 2);
-  --text-color: rgb(226, 226, 226);
-  --bs-white: rgba(225,225,225, .3)
-  --text-color-input: rgb(155 155 155)
+  --color-main: 2, 49, 94;
+  --color-secondary: 0, 69, 126;
+  --color-accent: 128, 100, 145;
+  --color-third: 47, 112, 175;
+  --text-color-primary: 185, 132, 140;
+  --text-color-white: 225, 225, 225;
+  --text-color-completed: 25, 118, 210;
+  --text-color-inactive: 128, 100, 145;
+  --transition: all 5 ease;
+
   --border-gradient: conic-gradient(from 180deg at 50% 50%, #e92a67 0deg, #a853ba 112.5deg, #2a8af6 228.75deg, rgba(42, 138, 246, 0) 360deg);
+
 }
 
 body {
-  background: var(--bg-black);
-  color: var(--text-color);
+  background: rgb(var(--color-main));
+  color: rgb(var(--text-color-primary));
   min-width: 375px;
   max-width: 450px;
   display: flex;
