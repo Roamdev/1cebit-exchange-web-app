@@ -3,24 +3,18 @@
 import { SliderItems } from "./SliderItems"
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import DragItem from './DragItem';
+// import DragItem from './DragItem';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import { useCoinStore } from '@/components/store';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from'./SliderCoins.module.css'
 
-const mock = [
-    {coinName: 'BTC', coinLogo: '/btc.png' },
-    {coinName: 'BNB', coinLogo: '/bnb.png' },
-    {coinName: 'ETH', coinLogo: '/eth.png' },
-    {coinName: 'USDT', coinLogo: '/usdt.png' },
-    {coinName: 'USD\n(Bank)', coinLogo: '/usd.png' },
-    {coinName: 'UAH\n(Bank)', coinLogo: '/uah.png' }
-]
 
 export const SliderCoins = () => {
+    const coins = useCoinStore((state) => state.coins)
     return (
         <DndProvider backend={HTML5Backend}>
             <Swiper
@@ -35,11 +29,11 @@ export const SliderCoins = () => {
                 loop={true}
                 className={styles.itemList}
             >
-                {mock.map(coin => (
-                    <SwiperSlide key={coin.coinName} >
-                        <DragItem coinName={coin.coinName} coinLogo={coin.coinLogo}>
-                            <SliderItems coinName={coin.coinName} coinLogo={coin.coinLogo}/>
-                        </DragItem>
+                {coins.map(coin => (
+                    <SwiperSlide key={coin.name} >
+                        {/* <DragItem onClick={()} coinName={coin.coinName} coinLogo={coin.coinLogo}> */}
+                            <SliderItems coinName={coin.name} coinLogo={coin.logo}/>
+                        {/* </DragItem> */}
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -1,24 +1,23 @@
 import Image from 'next/image';
 import { useDrop } from 'react-dnd';
-import { useState } from 'react';
 import { clsx } from 'clsx';
+import { Coin } from './store';
 
 import styles from './DropZone.module.css';
+
 type DropZoneProps = {
   pageTitle?: string;
+  selectedCoin?: Coin;
+  setSelectedCoin: (newCoin: Coin) => void;
 };
-type DroppedItem = {
-  coinName: string;
-  coinLogo: string;
-} | null;
 
-export function DropZone({ pageTitle }: DropZoneProps) {
-  const [droppedItem, setDroppedItem] = useState<DroppedItem>(null);
+
+export function DropZone({ pageTitle, setSelectedCoin, selectedCoin }: DropZoneProps) {
 
   const [{ canDrop }, drop] = useDrop(() => ({
     accept: 'COIN',
-    drop: (item: { coinName: string; coinLogo: string }) => {
-      setDroppedItem(item);
+    drop: (coin: Coin) => {
+      setSelectedCoin(coin);
     },
     collect: (monitor) => ({
       isOver: monitor.isOver(),
@@ -30,11 +29,11 @@ export function DropZone({ pageTitle }: DropZoneProps) {
     <div className={styles.container}>
       <div className={styles.border} />
       <div className={styles.dropZone}>
-        {droppedItem ? (
+        {selectedCoin ? (
           <>
             <Image
-              src={droppedItem.coinLogo}
-              alt={droppedItem.coinName}
+              src={selectedCoin.logo}
+              alt={selectedCoin.name}
               ref={(el) => {
                 drop(el);
               }}
