@@ -2,7 +2,7 @@
 import { StepPanel } from '@/components/StepPanel'
 import { NextStepButton } from '@/components/NextStepButton'
 import { InputBlock } from '@/components/InputBlock'
-import { DropZone } from '@/components/DropZone'
+import { SelectedCoin } from '@/components/SelectedCoin'
 
 import styles from './ChoosenWallet.module.css'
 
@@ -11,7 +11,7 @@ export default function ChooseWallet() {
         <div className="body">
             <StepPanel countPage={2}/>
             <main className="main">
-                <DropZone />
+                <SelectedCoin />
                 <InputBlock message="Sender's wallet address" />
                 <InputBlock message="Recipient's wallet address" />
                 <div className={styles.container}>

@@ -3,7 +3,7 @@
 import { StepPanel } from '@/components/StepPanel';
 import { NextStepButton } from '@/components/NextStepButton';
 import { SliderCoins } from '@/components/SliderCoins';
-import { DropZone } from '@/components/DropZone';
+import { SelectedCoin } from '@/components/SelectedCoin';
 
 import styles from './SecondPage.module.css';
 
@@ -12,7 +12,7 @@ export default function Page() {
     <div className="body">
       <StepPanel countPage={1} />
       <main className="main">
-        <DropZone pageTitle="Choose what you got" />
+        <SelectedCoin pageTitle="Choose what you got" />
         <div className={styles.container}>
           <div className={styles.block}>
             <span className={styles.message}>You will got</span>
