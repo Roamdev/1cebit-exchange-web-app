@@ -18,7 +18,6 @@ export function SelectedCoin({ pageTitle }: SelectedCoinProps) {
       <div className={styles.border} />
       <div className={styles.dropZone}>
         {selectedCoin != null ? (
-          <>
             <Image
               src={selectedCoin.logo}
               alt={selectedCoin.name}
@@ -27,18 +26,14 @@ export function SelectedCoin({ pageTitle }: SelectedCoinProps) {
               height={80}
               className={clsx(styles.coin, styles.coinWithoutBorder)}
             />
-            {pageTitle && <h1 className={styles.title}>{pageTitle}</h1>}
-          </>
         ) : (
-          <>
             <div
               className={clsx(styles.coin, styles.coinWithBorder)}
               role={'Dustbin'}>
               Select coin
             </div>
-            {pageTitle && <h1 className={styles.title}>{pageTitle}</h1>}
-          </>
         )}
+        {pageTitle && <h1 className={styles.title}>{pageTitle}</h1>}
       </div>
     </div>
   );

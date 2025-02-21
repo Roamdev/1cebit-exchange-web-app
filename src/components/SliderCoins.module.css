@@ -27,6 +27,7 @@
     z-index: 1;
     outline: none;
     border: 0;
+    cursor: pointer;
 }
 .button:hover {
     opacity: .6;

@@ -8,10 +8,7 @@ export type Coin = {
 
 type Coins = Coin[];
 
-let defaultCoins: Coins;
-
-// eslint-disable-next-line prefer-const
-defaultCoins = [
+const DEFAUL_COINS: Coins = [
   { id: 1, name: 'BTC', logo: '/btc.png'},
   { id: 2, name: 'BNB', logo: '/bnb.png'},
   { id: 3, name: 'ETH', logo: '/eth.png'},
@@ -20,7 +17,6 @@ defaultCoins = [
   { id: 6, name: 'UAH\n(Bank)', logo: '/uah.png'}
 ]
 
-
 type CoinStore = {
   coins: Coins;
   selectedCoin: Coin | null;
@@ -28,7 +24,7 @@ type CoinStore = {
 };
 
 export const useCoinStore = create<CoinStore>((set) => ({
-  coins: defaultCoins,
+  coins: DEFAUL_COINS,
   selectedCoin: null,
   setSelectedCoin: (coin) => set({ selectedCoin: coin })
 }));
